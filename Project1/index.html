@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <!--<link rel="stylesheet" href="style.css">-->
+        <style>
+            #form {
+                width: 400px;
+            }
+            #ftextarea {
+                width: 100%;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="form">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="fusername">Username*</label>
+                <input type="text" id="fusername" name="fusername"/>
+                <br>
+                <label for="fpassword">Password*</label>
+                <input type="password" id="fpassword" name="fpassword"/>
+            </fieldset>
+            <fieldset>
+                <legend>Gender*</legend>
+                <input type="radio" name="fmale" id="fmale" />
+                <label for="fmale">Male</label>
+                <input type="radio" name="ffemale" id="ffemale" />
+                <label for="ffemale">Female</label>
+            </fieldset>
+            <fieldset>
+                <legend>Programming Skill</legend>
+                <input type="checkbox" name="fjava" id="fjava"/>
+                <label for="fjava">Java</label>
+                <input type="checkbox" name="fcpp" id="fcpp"/>
+                <label for="fcpp">C++</label>
+                <input type="checkbox" name="fcsharp" id="fcsharp"/>
+                <label for="fcsharp">C#</label>
+            </fieldset>
+            <fieldset>
+                <legend>Fruit</legend>
+                <label for="ffruit">Choose a fruit:</label>
+                <select name="ffruit" id="ffruit">
+                    <option value="banana">Banana</option>
+                    <option value="apple">Apple</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </fieldset>
+            <textarea id="ftextarea" name="ftextarea" placeholder="Enter your comment here."></textarea>
+            <br/>
+            <input type="submit" value="SEND"/>
+            <input type="button" value="RESET"/>
+        </form>
+    </body>
+
+</html>
