@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Time and Date</title>
+    <!-- Add the Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Current Time and Date</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto"> <!-- add ml-auto class here -->
+          <li class="nav-item active p-1">
+            <a class="nav-link" href="#">Other Locations</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="jumbotron">
+        <h1 id="currentTime" class="display-4">Current time is: </h1>
+        <h1 id="currentDate" class="display-4">on </h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>We are here to show you time for different countries.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times</a>
+        </p>
+      </div>
+    </div>
+	
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">This is a simple webpage that displays the current time and date.</span>
+      </div>
+    </footer>
+
+    <!-- Add the Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Update the time every second
+        setInterval(function() {
+          // Get the current date and time
+          var now = new Date();
+          // Format the date and time to display on the page
+          var dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
+          var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][now.getMonth()];
+
+          var time = 'Current time is: ' + now.toLocaleTimeString();
+          var date = ' on ' + dayOfWeek + ', ' + month + ' ' + now.getDate() + ', ' + now.getFullYear();
+          // Display the date and time on the page
+          $('#currentTime').text(time);
+          $('#currentDate').text(date);
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
